@@ -1,5 +1,6 @@
 import Beingrahuul from "../assets/BEINGRAHUUL.svg"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 const Container = styled.div`
   height: 80px;
@@ -8,7 +9,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0px 20px;
-
 `
 
 const Logo = styled.img`
@@ -45,8 +45,8 @@ const Button = styled.div`
 function Navbar() {
   return (
     <Container>
-      <Logo src={Beingrahuul}/>
-      <Button>Add a photo</Button>
+      <Link to="/"><Logo src={Beingrahuul}/></Link>
+      <Link to="/create-post"><Button>Add a photo</Button></Link>
     </Container>
   )
 }

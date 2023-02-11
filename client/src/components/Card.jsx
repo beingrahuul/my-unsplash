@@ -36,7 +36,7 @@ const Info = styled.div`
   justify-content: center;
   flex-direction: column;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   gap: 10px;
 `
 
@@ -53,9 +53,7 @@ const User = styled.div`
 `
 
 const Pesron = styled.img`
-  width: 50px;
-  height: 50px;
-  background-color: white;
+  height: 40px;
 `
 
 
@@ -69,17 +67,21 @@ const Icons = styled.div`
 `
 
 const Icon = styled.img`
-  height: 30px;
+  height: 28px;
+  &:hover{
+    scale: 1.2;
+    cursor: pointer;
+  }
 `
 
 function Card({src, author}) {
-  const [hover, setHover] = useState(true);
+  const [hover, setHover] = useState(false);
 
   const handleHover = () => {
     setHover(true)
   }
   const handleExit = () => {
-    setHover(true)
+    setHover(false)
   }
 
   return (

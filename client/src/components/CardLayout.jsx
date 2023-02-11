@@ -7,6 +7,20 @@ const Container = styled.div`
   column-count: 4;
   column-gap: 20px;
   max-width: 1980px;
+  @media (max-width: 1300px) {
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+  @media (max-width: 1000px) {
+    column-count: 2;
+    column-gap: 20px;
+  }
+
+  @media (max-width: 600px) {
+    column-count: 1;
+    column-gap: 15px;
+  }
 `
 function CardLayout() {
   return (
